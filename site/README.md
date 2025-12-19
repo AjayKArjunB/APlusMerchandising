@@ -18,7 +18,8 @@ Notes & next steps
 
 - Contact form is demo-only. Replace the form `action` in `index.html` with your Formspree endpoint or integrate a server to handle submissions.
 - Checkout is a demo alert. To accept payments integrate with Stripe, PayPal, or another gateway.
-- Replace the placeholder SVG images in `site/images/` with professional product photos.
+- Product images were imported from the provided deck PDF and placed under `site/images/` (and `site/images/extracted/`); review and replace any images with high-resolution product photos where desired.
+- Remove any temporary extracted assets you don't need (PPM files were removed from the repo to save space).
 - Deploy to GitHub Pages: push the `site/` contents to a branch (e.g., `gh-pages`) or configure GitHub Pages to serve from the `site/` folder.
 
 Quick deploy to GitHub Pages (simple approach):
