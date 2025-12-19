@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="A+ Merchandising — Premium medical scrubs and apparel crafted for comfort, durability and hygiene. Global shipping.">
+  <meta name="theme-color" content="#071023">
+
+  <!-- Open Graph (social) -->
+  <meta property="og:title" content="A+ Merchandising — Premium Medical Scrubs">
+  <meta property="og:description" content="Comfortable, durable scrubs and lab coats for healthcare professionals. Worldwide shipping.">
+  <meta property="og:type" content="website">
+
+  <title>A+ Merchandising — Premium Medical Scrubs</title>
+  <meta name="keywords" content="medical scrubs, scrubs, lab coats, nurse uniforms, healthcare apparel, A+ Merchandising, global shipping">
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="images/logo.svg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Store",
+    "name": "A+ Merchandising",
+    "description": "Premium medical scrubs and lab wear for healthcare professionals. Global shipping available.",
+    "url": "https://yourdomain.example/",
+    "telephone": "+11234567890",
+    "email": "info@aplusmerch.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "US"
+    }
+  }
+  </script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="logo" href="#home" aria-label="A Plus Merchandising homepage">
+        <img src="images/logo.svg" alt="A+" width="48" height="48">
+        <span class="brand">A+ Merchandising</span>
+      </a>
+
+      <nav aria-label="Main navigation" class="main-nav">
+        <a href="#products">Products</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="controls">
+        <label class="sr-only" for="currency">Currency</label>
+        <select id="currency" aria-label="Select currency">
+          <option value="USD" selected>USD</option>
+          <option value="EUR">EUR</option>
+          <option value="GBP">GBP</option>
+        </select>
+
+        <button id="cartBtn" aria-haspopup="dialog" aria-controls="cartPanel" aria-expanded="false" title="View cart">Cart (<span id="cartCount">0</span>)</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <h1>Care for those who care for others</h1>
+          <p class="lead">Premium medical scrubs and lab wear designed for long shifts — breathable, durable, and globally shipped.</p>
+          <div class="hero-ctas">
+            <button onclick="scrollToSection('products')" class="btn primary">Shop Scrubs</button>
+            <a href="#contact" class="btn ghost">Contact Sales</a>
+          </div>
+          <p class="note">Worldwide shipping • Bulk & institutional orders welcome</p>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <img src="images/hero.svg" alt="Healthcare professionals in modern scrubs">
+        </div>
+      </div>
+    </section>
+
+    <section id="products" class="section products-section">
+      <div class="container">
+        <h2>Featured Collections</h2>
+        <p class="section-sub">Engineered fabrics • Antimicrobial finishes • Professional aesthetics</p>
+
+        <div class="product-grid" id="productGrid">
+          <!-- Products injected by script.js -->
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section dark-section">
+      <div class="container">
+        <h2>About A+ Merchandising</h2>
+        <p>We specialize in high-quality medical apparel tailored for doctors, nurses, students, and healthcare professionals. Focused on comfort, durability, hygiene, and a professional look that inspires confidence—made to perform across the globe.</p>
+        <ul>
+          <li>Comfort: Breathable, stretch-enhanced fabrics</li>
+          <li>Durability: Reinforced stitching and quality dyes</li>
+          <li>Hygiene: Easy-care, antimicrobial treatments available</li>
+          <li>Global reach: Streamlined shipping & international support</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="container contact-grid">
+        <div>
+          <h2>Contact Us</h2>
+          <p>Questions about bulk pricing, custom colors, or global accounts? Send us a message and we'll get back within 24–48 hours.</p>
+
+          <address>
+            <strong>Email:</strong> <a href="mailto:info@aplusmerch.com">info@aplusmerch.com</a><br>
+            <strong>Phone:</strong> +1 (123) 456‑7890
+          </address>
+        </div>
+
+        <form id="contactForm" class="contact-form" aria-label="Contact form">
+          <!-- Note: replace formAction with your Formspree endpoint if available -->
+          <div id="formStatus" role="status" aria-live="polite" class="sr-only"></div>
+          <input type="text" name="name" placeholder="Your name" required aria-required="true">
+          <input type="email" name="email" placeholder="Email" required aria-required="true">
+          <textarea name="message" rows="5" placeholder="How can we help?" required aria-required="true"></textarea>
+          <button type="submit" class="btn primary">Send Message</button>
+          <p class="form-note">Or email <a href="mailto:info@aplusmerch.com">info@aplusmerch.com</a></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <div>&copy; <span id="year"></span> A+ Merchandising. All rights reserved.</div>
+      <div class="social">Follow: <a href="#">Instagram</a> • <a href="#">LinkedIn</a></div>
+    </div>
+  </footer>
+
+  <!-- Cart Panel (hidden dialog) -->
+  <dialog id="cartPanel" aria-label="Shopping cart">
+    <h3>Your Cart</h3>
+    <div id="cartItems"></div>
+    <div class="cart-actions">
+      <div class="cart-total">Total: <strong><span id="cartTotal">0.00</span> <span id="currencyLabel">USD</span></strong></div>
+      <div>
+        <button id="checkoutBtn" class="btn primary">Checkout (Demo)</button>
+        <button id="closeCart" class="btn ghost">Close</button>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="script.js" type="module"></script>
+</body>
+</html>
