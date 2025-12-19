@@ -1,8 +1,11 @@
 /* Minimal demo e-commerce behavior (client-side only) */
 const products = [
-  { id: 'scrub-pro', title: 'Premium Scrubs', description: 'Comfortable, antimicrobial, moisture-wicking scrubs', priceUSD: 49.99, img: 'images/product1.svg' },
-  { id: 'lab-coat', title: 'Professional Lab Coat', description: 'Hygiene-focused lab coat with reinforced pockets', priceUSD: 79.99, img: 'images/product2.svg' },
-  { id: 'nurse-fit', title: 'Nurse Uniform', description: 'Designed for comfort and long shift durability', priceUSD: 59.99, img: 'images/product3.svg' }
+  { id: 'scrub-cap', title: 'Surgical Scrub Cap', description: 'Adjustable, breathable cap with mask buttons; washable and lightweight.', priceUSD: 3.59, img: 'images/scrub-cap.jpg' },
+  { id: 'under-scrub', title: 'Underscrub (Long Sleeve)', description: 'Ultra-soft Pima cotton underscrub — breathable and sweat-absorbing for long shifts.', priceUSD: 9.59, img: 'images/under-scrub.jpg' },
+  { id: 'premium-scrubs', title: 'Classic V-Neck Scrub', description: 'Modern V-neck with roomy pockets, side slits and back darts for a structured fit.', priceUSD: 13.19, img: 'images/premium-scrubs.jpg' },
+  { id: 'lab-coat', title: 'Professional Lab Coat', description: 'Lightweight 100% polyester lab coat with multiple pockets and breathable fabric.', priceUSD: 13.19, img: 'images/lab-coat.jpg' },
+  { id: 'sleeve-top', title: 'Cap Sleeve Scrub Top', description: 'Cap sleeve top with mandarin collar, hidden placket and practical pockets.', priceUSD: 14.39, img: 'images/sleeve-top.jpg' },
+  { id: 'jogger-pants', title: 'Jogger Scrub Pants', description: 'Slim-fit jogger pants with 8 pockets, elastic waist and ankle cuffs.', priceUSD: 14.39, img: 'images/jogger-pants.jpg' }
 ];
 
 const currencyRates = { USD: 1, EUR: 0.92, GBP: 0.80 };
